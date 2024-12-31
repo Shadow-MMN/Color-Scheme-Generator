@@ -26,7 +26,11 @@ function updateColors(data) {
 }
 
 function saveToLocalStorage(data) {
-    localStorage.setItem('colorScheme', JSON.stringify(data));
+    const colorSchemeData = {
+        colors: data.colors,
+        selectedColor: selectedColor.value
+    };
+    localStorage.setItem('colorScheme', JSON.stringify(colorSchemeData));
 }
 
 function loadFromLocalStorage() {
@@ -34,6 +38,7 @@ function loadFromLocalStorage() {
     if (savedData) {
         const data = JSON.parse(savedData);
         updateColors(data);
+        selectedColor.value = data.selectedColor;
     }
 }
 
