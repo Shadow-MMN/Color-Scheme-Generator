@@ -1,0 +1,72 @@
+html,body{
+    margin: 0;
+}
+header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgb(51, 51, 51);
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+form{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0.5em;
+   
+}
+select,button{
+    color: #252525;
+    background-color: white;
+    border: 1px solid #D1D5DB;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+button{
+    cursor: pointer;
+}
+main{
+    min-height: 100vh;
+    display: grid;
+    grid-template: 1fr / repeat(5, 1fr);
+}
+
+.one{
+    background-color: black;
+}
+.two{
+    background-color: blue;
+}
+.three{
+    background-color: green;
+}
+.four{
+    background-color: yellow;
+}
+.five{
+    background-color: orange;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #1F2937;
+    display: grid;
+    grid-template: 1fr / repeat(5, 1fr);
+    justify-items: center;
+}
+
+.hex-value{
+    color: white;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}

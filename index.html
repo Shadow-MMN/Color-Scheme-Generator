@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Color Scheme Generator</title>
+</head>
+<body>
+    <header>
+        <form id="color-form">
+            <input type="color" value="#ff0000" id="selected-color">
+            <select name="color-selection" id="color-selection">
+                <option value="monochrome">Monochrome</option>
+                <option value="monochrome-dark">Monochrome-dark</option>
+                <option value="monochrome-light">Monochrome-light</option>
+                <option value="analogic">Analogic</option>
+                <option value="complement">Complement</option>
+                <option value="analogic-complement">Analogic-complement</option>
+                <option value="triad">Triad</option>
+            </select>
+            <button type="submit" id="submit">Get Color Scheme</button>
+        </form>
+    </header>
+    <main>
+        <div class="color-scheme one" id="color1"></div>
+        <div class="color-scheme two" id="color2"></div>
+        <div class="color-scheme three" id="color3"></div>
+        <div class="color-scheme four" id="color4"></div>
+        <div class="color-scheme five" id="color5"></div>
+    </main>
+    <footer>
+        <p class="hex-value" id="hex1">#000000</p>
+        <p class="hex-value" id="hex2">#0000FF</p>
+        <p class="hex-value" id="hex3">#008000</p>
+        <p class="hex-value" id="hex4">#FFFF00</p>
+        <p class="hex-value" id="hex5">#FFA500</p>
+    </footer>
+</body>
+<script src="./script.js"></script>
+</html>
