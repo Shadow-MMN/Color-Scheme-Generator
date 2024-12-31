@@ -33,22 +33,6 @@ main{
     grid-template: 1fr / repeat(5, 1fr);
 }
 
-.one{
-    background-color: black;
-}
-.two{
-    background-color: blue;
-}
-.three{
-    background-color: green;
-}
-.four{
-    background-color: yellow;
-}
-.five{
-    background-color: orange;
-}
-
 footer {
     position: fixed;
     bottom: 0;
