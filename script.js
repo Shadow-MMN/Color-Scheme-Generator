@@ -46,15 +46,14 @@ colorForm.addEventListener("submit", function(e){
     e.preventDefault();
     console.log(selectedColor.value);
     console.log(colorSelection.value);
-    fetch(`https://www.thecolorapi.com/scheme?hex=${selectedColor.value.substring(1)}&format=json&mode=${colorSelection.value}&count=5`)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            updateColors(data);
-            saveToLocalStorage(data);
-        })
-        .catch(error => console.error('Error:', error));
+   handleFetch()
 });
+async function handleFetch() {
+    const res = await fetch(`https://www.thecolorapi.com/scheme?hex=${selectedColor.value.substring(1)}&format=json&mode=${colorSelection.value}&count=5`)
+    const data = await res.json()
+    updateColors(data)
+    saveToLocalStorage(data)
+}
 
 // Load the saved color scheme on page load
 window.addEventListener('load', loadFromLocalStorage);
